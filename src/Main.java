@@ -1,17 +1,20 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
-
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        /*
+        извлечь число из текста.
+        напечатать все числа в этой строке по порядку.
+        написать функцию, возвращающую строку, каждый элемент которого
+        представляет один бит 32-битного целого числа таким образом,
+        чтобы при выводе на печать он выглядел как двоичное представление целого числа
+        (младший значащий бит справа)
+         */
+        Scanner scanner = new Scanner(System.in);
+        String text = scanner.nextLine();
+        text = text.replaceAll("[^0123456789]", "");
+        System.out.println(text);
+        int num = Integer.parseInt(Integer.toBinaryString(Integer.parseInt(text)));
+        System.out.println(num);
     }
 }
